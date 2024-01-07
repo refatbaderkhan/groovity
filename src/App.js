@@ -1,11 +1,9 @@
-import { Button } from "@/components/ui/button"
+import SideMenu from "@/components/ui/SideMenu";
 
 function App() {
   return (
     <div>
-      <div className='font-bold underline'>
-      Hello Goorvitiers!
-      </div>
+      <SideMenu />
     </div>
   );
 }

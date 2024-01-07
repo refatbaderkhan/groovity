@@ -16,12 +16,18 @@ module.exports = {
         "2xl": "1400px",
       },
     },
+    height: {
+      '10%': '10vh',
+      '92%' : '92vh',
+      'full': '100vh',
+    },
     extend: {
       colors: {
+        bordercolor: '#656565',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
+        background: "#262626",
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
