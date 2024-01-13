@@ -16,13 +16,16 @@ module.exports = {
         "2xl": "1400px",
       },
     },
-    height: {
-      '10%': '10vh',
-      '92%' : '92vh',
-      'full': '100vh',
-    },
     extend: {
+      height: {
+        '10%': '10vh',
+        '92%' : '92vh',
+        '66%' : '66vh',
+        '8%' : '8vh',
+        'full': '100vh',
+      },
       colors: {
+        groovity: '#FFDE5A',
         bordercolor: '#656565',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
