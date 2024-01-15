@@ -8,6 +8,7 @@ import MusicPlayerLike from './MusicPlayerLike';
 import MusicPlayerQueue from './MusicPlayerQueue';
 import MusicPlayerVolume from './MusicPlayerVolume';
 import MusicPlayerSeek from './MusicPlayerSeek';
+import MusicPlayerTrack from './MusicPlayerTrack';
 
 const MusicPlayer = () => {
 
@@ -20,20 +21,8 @@ const MusicPlayer = () => {
   const [queueToggle, setQueueToggle] = useState(false)
 
   return (
-    <div className=' flex flex-row justify-start justify-items-center h-8% w-screen border-t border-bordercolor text-[#BFBFBF] font-bold'>
-      <div className='trackinfo flex flex-row w-1/6 pl-7'>
-        <div className='trackimage bg-white mt-2 mb-2 rounded aspect-square'>
-          &nbsp; 
-        </div>
-        <div className='tracktypography flex flex-col justify-between mt-2 mb-2 ml-4 leading-tight	'>
-          <div className='trackname'>
-            Track
-          </div>
-          <div className='artistname text-[#666666] font-semibold'>
-            Artist
-          </div>
-        </div>
-      </div>
+    <div className=' flex flex-row justify-start justify-items-center h-8% w-screen border-t border-bordercolor text-[#BFBFBF] font-bold left-0 bottom-0 fixed z-20'>
+        <MusicPlayerTrack/>
       <div className='playercontrol flex flex-row self-center items-center w-5/6 justify-around pl-4 pr-16'>
         <MusicPlayerPrevious/>
         <MusicPlayerPlay playToggle={playToggle} setPlayToggle={setPlayToggle}/>

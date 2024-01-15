@@ -22,6 +22,7 @@ module.exports = {
         '92%' : '92vh',
         '66%' : '66vh',
         '8%' : '8vh',
+        '12%' : '12vh',
         'full': '100vh',
       },
       colors: {
