@@ -2,10 +2,15 @@ import React from 'react'
 import { IoMdHeart } from "react-icons/io";
 
 
-const MusicPlayerLike = () => {
+const MusicPlayerLike = ({ likeToggle, setLikeToggle }) => {
+
   return (
-    <div className='shuffle'>
-      <IoMdHeart size={24} color='#FFDE5A'/>
+    <div className='cursor-pointer'>
+      <IoMdHeart
+      size={24}
+      color={likeToggle ? '#FFDE5A' : '#BFBFBF'}
+      onClick={() => setLikeToggle(!likeToggle)}
+      />
     </div>
   )
 }

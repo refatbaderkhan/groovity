@@ -4,7 +4,7 @@ import { MdSkipNext } from "react-icons/md";
 
 const MusicPlayerNext = () => {
   return (
-    <div>
+    <div className='cursor-pointer'>
       <MdSkipNext size={30} color='#FFDE5A'/>
     </div>
   )

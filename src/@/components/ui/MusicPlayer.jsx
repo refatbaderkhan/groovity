@@ -1,20 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MusicPlayerNext from './MusicPlayerNext';
 import MusicPlayerPlay from './MusicPlayerPlay';
 import MusicPlayerPrevious from './MusicPlayerPrevious';
 import MusicPlayerRepeat from './MusicPlayerRepeat';
 import MusicPlayerShuffle from './MusicPlayerShuffle';
-import { Progress } from "@/components/ui/progress" ;
 import MusicPlayerLike from './MusicPlayerLike';
 import MusicPlayerQueue from './MusicPlayerQueue';
 import MusicPlayerVolume from './MusicPlayerVolume';
+import MusicPlayerSeek from './MusicPlayerSeek';
 
 const MusicPlayer = () => {
 
+  const [playToggle, setPlayToggle] = useState(false)
+  const [shuffleToggle, setShuffleToggle] = useState(false)
+  const [repeatToggle, setRepeatToggle] = useState(false)
+  const [likeToggle, setLikeToggle] = useState(false)
+  const [volumeToggle, setVolumeToggle] = useState(false)
+  const [volume, setVolume] = useState(50)
+  const [queueToggle, setQueueToggle] = useState(false)
 
   return (
     <div className=' flex flex-row justify-start justify-items-center h-8% w-screen border-t border-bordercolor text-[#BFBFBF] font-bold'>
-      <div className='trackinfo flex flex-row w-1/6 ml-7'>
+      <div className='trackinfo flex flex-row w-1/6 pl-7'>
         <div className='trackimage bg-white mt-2 mb-2 rounded aspect-square'>
           &nbsp; 
         </div>
@@ -27,18 +34,16 @@ const MusicPlayer = () => {
           </div>
         </div>
       </div>
-      <div className='playercontrol flex flex-row self-center items-center w-4/6'> 
+      <div className='playercontrol flex flex-row self-center items-center w-5/6 justify-around pl-4 pr-16'>
         <MusicPlayerPrevious/>
-        <MusicPlayerPlay/>
+        <MusicPlayerPlay playToggle={playToggle} setPlayToggle={setPlayToggle}/>
         <MusicPlayerNext/>
-        <MusicPlayerShuffle/>
-        <MusicPlayerRepeat/>
-        <div className = 'h-fit w-1/2'>
-          <Progress value={50} />
-        </div>
-        <MusicPlayerVolume/>
-        <MusicPlayerLike/>
-        <MusicPlayerQueue />
+        <MusicPlayerShuffle shuffleToggle={shuffleToggle} setShuffleToggle={setShuffleToggle}/>
+        <MusicPlayerRepeat repeatToggle={repeatToggle} setRepeatToggle={setRepeatToggle}/>
+        <MusicPlayerSeek/>
+        <MusicPlayerVolume volumeToggle={volumeToggle} setVolumeToggle={setVolumeToggle} volume={volume} setVolume={setVolume}/>
+        <MusicPlayerLike likeToggle={likeToggle} setLikeToggle={setLikeToggle}/>
+        <MusicPlayerQueue queueToggle={queueToggle} setQueueToggle={setQueueToggle}/>
       </div>
       <div className='tracksocial'>
       </div>

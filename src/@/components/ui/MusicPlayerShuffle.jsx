@@ -2,10 +2,15 @@ import React from 'react'
 import { PiShuffleBold } from "react-icons/pi";
 
 
-const MusicPlayerShuffle = () => {
+const MusicPlayerShuffle = ({ shuffleToggle, setShuffleToggle }) => {
+  
   return (
-    <div className='shuffle'>
-      <PiShuffleBold  size={24} color='#FFDE5A'/>
+    <div className='cursor-pointer'>
+      <PiShuffleBold
+      size={24}
+      color={shuffleToggle ? '#FFDE5A' : '#BFBFBF'}
+      onClick={() => setShuffleToggle(!shuffleToggle)}
+      />
     </div>
   )
 }
