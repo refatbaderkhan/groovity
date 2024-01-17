@@ -11,6 +11,10 @@ I will continuously update this readme file to document my thought process, tria
 - React
 - Node.js
 
+#### Server Repo
+
+[Groovity Server](https://github.com/refatbaderkhan/groovity-server)
+
 
 #### UI/UX Design
 
@@ -19,5 +23,6 @@ I'm trying to take inspiration from many music services to make the website as s
 #### Technologies Used
 
 It's still tricky to choose which MERN complementary technologies to support the website and make the project more professional. I will keep updating this list as I'm discovering and implementing :
+- Spotify Web API
 - Shadcn UI Library
 - Tailwind CSS Framework
