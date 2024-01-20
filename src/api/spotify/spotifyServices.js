@@ -28,3 +28,44 @@ export const spotifyNewAlbumReleases = async () => {
   });
   return response;
 }
+
+
+
+export const spotifyGetArtist = async (artist_id) => {
+  const response = await sendRequest({
+    route: `/spotify/get-artist/${artist_id}`,
+  });
+  return response;
+}
+
+export const spotifyGetSeveralArtists = async (artist_ids) => {
+  const response = await sendRequest({
+    route: `/spotify/get-several-artists/${artist_ids}`,
+  });
+  return response;
+}
+
+export const spotifyGetArtistAlbums = async (artist_id) => {
+  const response = await sendRequest({
+    route: `/spotify/get-artist-albums/${artist_id}`,
+  });
+  console.log(response);
+  return response;
+}
+
+export const spotifyGetArtistTopTracks = async (artist_id) => {
+  const response = await sendRequest({
+    route: `/spotify/get-artist-top-tracks/${artist_id}`,
+  });
+  return response;
+}
+
+export const spotifyGetArtistRelatedArtists = async (artist_id) => {
+  const response = await sendRequest({
+    route: `/spotify/get-artist-related-artists/${artist_id}`,
+  });
+  console.log(response);
+  return response;
+}
+
+
