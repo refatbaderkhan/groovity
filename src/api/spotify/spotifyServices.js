@@ -49,7 +49,6 @@ export const spotifyGetArtistAlbums = async (artist_id) => {
   const response = await sendRequest({
     route: `/spotify/get-artist-albums/${artist_id}`,
   });
-  console.log(response);
   return response;
 }
 
@@ -63,6 +62,22 @@ export const spotifyGetArtistTopTracks = async (artist_id) => {
 export const spotifyGetArtistRelatedArtists = async (artist_id) => {
   const response = await sendRequest({
     route: `/spotify/get-artist-related-artists/${artist_id}`,
+  });
+  return response;
+}
+
+
+
+export const spotifyGetSingleBrowseCategory = async (category_id) => {
+  const response = await sendRequest({
+    route: `/spotify/single-browse-category/${category_id}`,
+  });
+  return response;
+}
+
+export const spotifyGetSeveralBrowseCategories = async () => {
+  const response = await sendRequest({
+    route: "/spotify/several-browse-categories/",
   });
   console.log(response);
   return response;
