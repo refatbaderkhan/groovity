@@ -84,3 +84,15 @@ export const spotifyGetSeveralBrowseCategories = async () => {
 }
 
 
+
+export const spotifyGetAvailableGenreSeeds = async () => {
+  const response = await sendRequest({
+    route: "/spotify/available-genre-seeds/",
+  });
+  return response;
+}
+
+
+
+
+
