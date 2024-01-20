@@ -1,11 +1,11 @@
 import { Progress } from "@/components/ui/progress"
-import { spotifyGetCategoryPlaylists } from "api/spotify/spotifyServices"
+import { spotifyGetTrackRecommendations } from "api/spotify/spotifyServices"
 import React, {useEffect} from 'react'
 
 
 const Test = () => {
   useEffect(() => {
-    spotifyGetCategoryPlaylists('dinner')
+    spotifyGetTrackRecommendations('4NHQUGzhtTLFvgF5SZesLK', 'classical,country', '0c6xIDDpzE81m2q797ordA')
   }, [])
   return (
     <div className='text-[#BFBFBF]'>

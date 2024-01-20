@@ -1,6 +1,7 @@
 import { sendRequest } from "api/apiConfig";
 
 
+//Albums Endpoints
 export const spotifyGetAlbum = async (album_id) => {
   const response = await sendRequest({
     route: `/spotify/get-album/${album_id}`,
@@ -30,7 +31,7 @@ export const spotifyNewAlbumReleases = async () => {
 }
 
 
-
+//Artists Endpoints
 export const spotifyGetArtist = async (artist_id) => {
   const response = await sendRequest({
     route: `/spotify/get-artist/${artist_id}`,
@@ -67,7 +68,7 @@ export const spotifyGetArtistRelatedArtists = async (artist_id) => {
 }
 
 
-
+//Categories Endpoints 
 export const spotifyGetSingleBrowseCategory = async (category_id) => {
   const response = await sendRequest({
     route: `/spotify/single-browse-category/${category_id}`,
@@ -84,7 +85,7 @@ export const spotifyGetSeveralBrowseCategories = async () => {
 }
 
 
-
+//Genres Endpoints
 export const spotifyGetAvailableGenreSeeds = async () => {
   const response = await sendRequest({
     route: "/spotify/available-genre-seeds/",
@@ -93,7 +94,7 @@ export const spotifyGetAvailableGenreSeeds = async () => {
 }
 
 
-
+//Playlists Endpoints
 export const spotifyGetPlaylist = async (playlist_id) => {
   const response = await sendRequest({
     route: `/spotify/get-playlist/${playlist_id}`,
@@ -112,6 +113,45 @@ export const spotifyGetCategoryPlaylists = async (category_id) => {
   const response = await sendRequest({
     route: `/spotify/category-playlists/${category_id}`,
   });
+  return response;
+}
+
+
+//Tracks Endpoints
+export const spotifyGetTrack = async (track_id) => {
+  const response = await sendRequest({
+    route: `/spotify/get-track/${track_id}`,
+  });
+  return response;
+}
+
+export const spotifyGetSeveralTracks = async (track_ids) => {
+  const response = await sendRequest({
+    route: `/spotify/get-several-tracks/${track_ids}`,
+  });
+  return response;
+}
+
+export const spotifyGetTrackAudioFeatures = async (track_id) => {
+  const response = await sendRequest({
+    route: `/spotify/get-track-audio-features/${track_id}`,
+  });
+  console.log(response);
+  return response;
+}
+
+export const spotifyGetTrackAudioAnalysis = async (track_id) => {
+  const response = await sendRequest({
+    route: `/spotify/get-track-audio-analysis/${track_id}`,
+  });
+  return response;
+}
+
+export const spotifyGetTrackRecommendations = async (seed_artists, seed_genres, seed_tracks) => {
+  const response = await sendRequest({
+    route: `/spotify/get-tracks-recommendations/${seed_artists}/${seed_genres}/${seed_tracks}`,
+  });
+  console.log(response);
   return response;
 }
 
