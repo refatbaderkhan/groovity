@@ -94,5 +94,28 @@ export const spotifyGetAvailableGenreSeeds = async () => {
 
 
 
+export const spotifyGetPlaylist = async (playlist_id) => {
+  const response = await sendRequest({
+    route: `/spotify/get-playlist/${playlist_id}`,
+  });
+  return response;
+}
+
+export const spotifyGetFeaturedPlaylists = async () => {
+  const response = await sendRequest({
+    route: "/spotify/featured-playlists/",
+  });
+  return response;
+}
+
+export const spotifyGetCategoryPlaylists = async (category_id) => {
+  const response = await sendRequest({
+    route: `/spotify/category-playlists/${category_id}`,
+  });
+  return response;
+}
+
+
+
 
 
