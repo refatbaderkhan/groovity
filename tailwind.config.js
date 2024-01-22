@@ -19,8 +19,11 @@ module.exports = {
     extend: {
       height: {
         '10%': '10vh',
+        '82%' : '82vh',
         '92%' : '92vh',
         '66%' : '66vh',
+        '3%' : '3vh',
+        '4%' : '4vh',
         '8%' : '8vh',
         '12%' : '12vh',
         'full': '100vh',
@@ -83,5 +86,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require('tailwind-scrollbar')
+  ],
 }
