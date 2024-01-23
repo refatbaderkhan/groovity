@@ -50,7 +50,7 @@ CommandInput.displayName = CommandPrimitive.Input.displayName
 const CommandList = React.forwardRef(({ className, ...props }, ref) => (
   <CommandPrimitive.List
     ref={ref}
-    className={cn("max-h-[300px] overflow-y-auto overflow-x-hidden", className)}
+    className={cn("max-h-[300px] h-[calc(100% - 11px)] overflow-y-auto overflow-x-hidden", className)}
     {...props} />
 ))
 
@@ -66,7 +66,7 @@ const CommandGroup = React.forwardRef(({ className, ...props }, ref) => (
   <CommandPrimitive.Group
     ref={ref}
     className={cn(
-      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none aria-selected:bg-accent aria-selected:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none aria-selected:bg-accent aria-selected:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 max-h-full scrollbar-thin scrollbar-track-[#656565] scrollbar-thumb-[#262626]",
       className
     )}
     {...props} />

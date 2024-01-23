@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState,useEffect} from "react"
 import { Check, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -14,11 +14,16 @@ import { Popover,
        } from "@/components/ui/popover"
 
 
-export function GenreCombobox({genres}) {
+export function MusicWindowGenreFilterCombobox({genres, selectedGenres, setSelectedGenres}) {
 
   const [open, setOpen] = useState(false)
-  const [selectedGenres, setSelectedGenres] = useState([])
   const [genreSeeds, setGenreSeeds] = useState(genres)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setGenreSeeds(genres)
+    setLoading(false)
+  }, [genres])
 
 
   const handleSelect = (currentValue) => {
@@ -38,6 +43,8 @@ export function GenreCombobox({genres}) {
       return [...prevGenres, currentValue].sort()
     })
   }
+
+  if (loading) return null
    
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -52,11 +59,11 @@ export function GenreCombobox({genres}) {
           <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[150px] p-0 h-72 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
-        <Command className="bg-background text-[#BFBFBF] h-30">
-          <CommandInput placeholder="Search genres..." />
+      <PopoverContent className="w-[150px] p-0 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+        <Command className="bg-background text-[#BFBFBF] flex flex-col h-72">
+          <CommandInput placeholder="Search genres..." className="h-10" />
           <CommandEmpty>No genre found.</CommandEmpty>
-          <CommandGroup className="hover:bg-background hover:text-[#BFBFBF]">
+          <CommandGroup className="hover:bg-background hover:text-[#BFBFBF] overflow-y-scroll flex flex-col">
             {selectedGenres.length > 0 && (
               selectedGenres.map((selectedGenre) => (
                 <CommandItem
