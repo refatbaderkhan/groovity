@@ -53,7 +53,7 @@ export function MusicWindowGenreFilterCombobox({genres, selectedGenres, setSelec
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[150px] justify-between text-[#BFBFBF] hover:bg-background hover:text-[#BFBFBF] round-md border-[#656565] border font-normal"
+          className="w-[150px] justify-between text-[#BFBFBF] hover:bg-background hover:text-[#BFBFBF] round-md border-[#656565] border font- h-7"
         >
           {"Genre"}
           <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />

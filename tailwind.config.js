@@ -27,6 +27,13 @@ module.exports = {
         '8%' : '8vh',
         '12%' : '12vh',
         'full': '100vh',
+        'card' : '290px',
+        'cardimage' : '200px',
+        'cardtitle' : '45px',
+      },
+      width: {
+        'card' : '200px',
+        'cardimage' : '200px',
       },
       colors: {
         groovity: '#FFDE5A',

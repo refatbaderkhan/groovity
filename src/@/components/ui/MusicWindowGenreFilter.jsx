@@ -23,7 +23,7 @@ const MusicWindowGenreFilter = () => {
   }, [])
 
   return (
-    <div className='genre-filter flex flex-row h-3% w-full justify-between'>
+    <div className='genre-filter flex flex-row h-4% w-full justify-between'>
       <div className='selected-genres flex flex-row justify-start'>
         {selectedGenres.map((genre) => (
           <MusicWindowGenreFilterButton genre={genre} handleUnselect={handleUnselect} />
