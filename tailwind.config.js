@@ -28,11 +28,14 @@ module.exports = {
         '12%' : '12vh',
         'full': '100vh',
         'card' : '290px',
-        'cardimage' : '200px',
-        'cardtitle' : '45px',
+        'cardimage' : '198.5px',
+        'cardtitle' : '34px',
+        'cardartist' : '30px',
+        'cardtype' : '18px',
       },
       width: {
         'card' : '200px',
+        'cardtitle' : '200px',
         'cardimage' : '200px',
       },
       colors: {
