@@ -78,7 +78,7 @@ export const spotifyGetSingleBrowseCategory = async (category_id) => {
 
 export const spotifyGetSeveralBrowseCategories = async () => {
   const response = await sendRequest({
-    route: "/spotify/several-browse-categories/",
+    route: "/spotify/several-browse-categories/?offset=0&limit=50",
   });
   console.log(response);
   return response;

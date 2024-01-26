@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import MusicWindowGenreFilter from './MusicWindowGenreFilter'
+import MusicWindowCategoryFilter from './MusicWindowCategoryFilter'
 import MusicWindowAlbumsCarousel from './MusicWindowAlbumsCarousel'
 import { spotifyNewAlbumReleases, spotifyGetFeaturedPlaylists } from 'api/spotify/spotifyServices'
 import MusicWindowPlaylistsCarousel from './MusicWindowPlaylistsCarousel'
@@ -23,7 +23,7 @@ useEffect(() => {
 
   return (
     <div className='MusicWindow h-82% pl-10 pr-10 pt-3.5 pb-3'>
-      <MusicWindowGenreFilter />
+      <MusicWindowCategoryFilter />
       <div className='h-74% overflow-y-scroll pl-10 pr-10 mt-3.5 pb-3.5 scrollbar-thin scrollbar-thumb-bordercolor scrollbar-track-transparent scrollbar-thumb-rounded-full scrollbar-track-rounded-full'>
       <MusicWindowAlbumsCarousel carouselTitle='New Releases' albums={albums}/>
       <MusicWindowPlaylistsCarousel carouselTitle='Featured Playlists' playlists={featuredPlaylists}/>
