@@ -7,7 +7,7 @@ import MusicWindowAlbumCard from './MusicWindowAlbumCard'
 const MusicWindowAlbumsCarousel = ({carouselTitle, albums}) => {
   return (
     <div>
-    <div className='MusicWindowTitle text-xl font-semibold text-[#BFBFBF] mt-3.5'>
+    <div className='MusicWindowTitle text-xl font-semibold text-[#BFBFBF]'>
     {carouselTitle}
     </div>
     <div className="mt-3.5">

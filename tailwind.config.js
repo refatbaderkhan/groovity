@@ -19,6 +19,7 @@ module.exports = {
     extend: {
       height: {
         '10%': '10vh',
+        '74%' : '74vh',
         '82%' : '82vh',
         '92%' : '92vh',
         '66%' : '66vh',
@@ -28,6 +29,7 @@ module.exports = {
         '12%' : '12vh',
         'full': '100vh',
         'card' : '290px',
+        'playlistcard' : '260px',
         'cardimage' : '198.5px',
         'cardtitle' : '34px',
         'cardartist' : '30px',
