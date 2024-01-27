@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { getTextWidth } from '@/utilities';
 
-const MusicWindowPlaylistCard = ({ playlist }) => {
+const MusicWindowPlaylistCard = ({ playlist , singleDisplay }) => {
   const { name, images } = playlist;
   const nameRef = useRef();
   const containerRef = useRef();
@@ -48,7 +48,7 @@ const MusicWindowPlaylistCard = ({ playlist }) => {
 
   return (
     <div
-      className="w-card h-playlistcard rounded bg-[#3b3b3b] flex flex-col justify-start hover:bg-[#515151] transition duration-300 ease-in-out cursor-pointer"
+      className={`w-card h-playlistcard rounded bg-[#3b3b3b] flex flex-col justify-start hover:bg-[#515151] transition duration-300 ease-in-out cursor-pointer ${singleDisplay ? 'mr-2.5 ml-2.5 mb-5' : ''}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

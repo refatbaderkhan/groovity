@@ -1,24 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { MusicWindowCategoryFilterCombobox } from './MusicWindowCategoryFilterCombobox';
-import { spotifyGetSeveralBrowseCategories } from 'api/spotify/spotifyServices';
 import MusicWindowCategoryFilterButton from './MusicWindowCategoryFilterButton';
 
-const MusicWindowCategoryFilter = () => {
-
-  const [categories, setCategories] = useState([]);
-  const [selectedCategories, setSelectedCategories] = useState([]);
+const MusicWindowCategoryFilter = ({ categories, selectedCategories, setSelectedCategories }) => {
 
   const handleUnselect = (category) => {
     setSelectedCategories(selectedCategories.filter((selectedCategory) => selectedCategory.id !== category.id))
   }
-
-  useEffect(() => {
-    spotifyGetSeveralBrowseCategories()
-      .then((response) => {
-        const sortedCategories = response.categories.items.sort((a, b) => a.name.localeCompare(b.name));
-        setCategories(sortedCategories);
-      })
-  }, []);
 
   return (
     <div className='genre-filter flex flex-row h-4% w-full pl-10 justify-between'>
