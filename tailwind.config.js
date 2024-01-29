@@ -30,6 +30,7 @@ module.exports = {
         'full': '100vh',
         'card' : '290px',
         'playlistcard' : '260px',
+        'artistcard': '255px',
         'cardimage' : '198.5px',
         'cardtitle' : '34px',
         'cardartist' : '30px',
@@ -39,6 +40,7 @@ module.exports = {
         'card' : '200px',
         'cardtitle' : '200px',
         'cardimage' : '200px',
+        'artistimage' : '198.5px',
       },
       colors: {
         groovity: '#FFDE5A',

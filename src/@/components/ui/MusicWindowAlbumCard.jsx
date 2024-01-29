@@ -17,7 +17,7 @@ const MusicWindowAlbumCard = ({ album }) => {
     return () => {
       window.removeEventListener('resize', checkLength);
     };
-  }, []);
+  }, [album]);
 
 
   const checkLength = () => {

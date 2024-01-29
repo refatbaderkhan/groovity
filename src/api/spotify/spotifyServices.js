@@ -80,7 +80,6 @@ export const spotifyGetSeveralBrowseCategories = async () => {
   const response = await sendRequest({
     route: "/spotify/several-browse-categories/?offset=0&limit=50",
   });
-  console.log(response);
   return response;
 }
 
@@ -112,6 +111,14 @@ export const spotifyGetFeaturedPlaylists = async () => {
 export const spotifyGetCategoryPlaylists = async (category_id) => {
   const response = await sendRequest({
     route: `/spotify/category-playlists/${category_id}`,
+  });
+  return response;
+}
+
+//Search Endpoint
+export const spotifySearch = async (query) => {
+  const response = await sendRequest({
+    route: `/spotify/search/${query}`,
   });
   return response;
 }

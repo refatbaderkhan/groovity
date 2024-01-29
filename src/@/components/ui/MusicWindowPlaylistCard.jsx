@@ -54,7 +54,7 @@ const MusicWindowPlaylistCard = ({ playlist , singleDisplay }) => {
     >
       <div className="p-1.5 h-cardimage w-cardimage">
         <img
-          src={images[0].url}
+          src={images.length > 0 ? images[0].url : ''}
           alt={`${name} cover`}
           className="rounded w-full align-self-center"
         />
